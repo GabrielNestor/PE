@@ -19,6 +19,8 @@
         data-sizing="px"
       />
 
+      <!-- px is a data attribute used as a suffix -->
+
       <label for="blur">Blur:</label>
       <input
         id="blur"
@@ -40,11 +42,17 @@
       :root {
         --base: fuchsia;
         --spacing: 10px;
-        --blurr: 10px;
+        --blurr: 0px;
       }
 
       img {
         padding: var(--spacing);
+        background: var(--base);
+        filter: blur(var(--blur));
+      }
+
+      .hl {
+        color: var(--base);
       }
     </style>
 
